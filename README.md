@@ -2,6 +2,10 @@
 
 Improved image registration between baseline (3-month) and follow-up (12-month) XCT-II images of the MCP joint to show trabecular bone formation and loss over 9-months. This registration is performed outside of IPL and the OpenVMS system as we can obtain more accurate results using SimpleITK.
 
+## Requirements:
+
+To run this BHS registration script, you will need to download the ***Manskelab*** GitHub repository and install the ***manskelab*** anaconda environment. See the setup instructions for the ***Manskelab*** repository [here](https://github.com/ManskeLab/Manskelab/tree/master/setup).
+
 ## Steps to perform image registration:
 1. Transfer the 3-month and 12-month grayscale images from the UCT system to your computer using FileZilla
     - Make sure you set your file transfer type to "Auto"
@@ -123,11 +127,11 @@ Improved image registration between baseline (3-month) and follow-up (12-month) 
     conda activate manskelab
     python BHS_reg.py arg1 arg2 arg3 arg4 arg5 arg6
     ```
-Where:
-    - arg1 = The input 03MO XCT grayscale image (image path + name)
-    - arg2 = The input 12MO XCT grayscale image (image path + name)
-    - arg3 = The registered output 12MO to 03MO XCT grayscale image (image path + name)
-    - arg4 = The input 03MO XCT segmented image (image path + name)
-    - arg5 = The input 12MO XCT segmented image (image path + name)
-    - arg6 = The registered output 12MO to 03MO XCT segmented image (image path + name)Total of 6 files.
+    - Where:
+        - arg1 = The input 03MO XCT grayscale image (image path + name)
+        - arg2 = The input 12MO XCT grayscale image (image path + name)
+        - arg3 = The registered output 12MO to 03MO XCT grayscale image (image path + name)
+        - arg4 = The input 03MO XCT segmented image (image path + name)
+        - arg5 = The input 12MO XCT segmented image (image path + name)
+        - arg6 = The registered output 12MO to 03MO XCT segmented image (image path + name)Total of 6 files.
 
