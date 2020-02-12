@@ -102,7 +102,8 @@ To run this BHS registration script, you will need to download the ***Manskelab*
 
         ipl> write
         -name                      [internal_name] > cl
-        -filename                  [default_file_name] > BHS_030_03MO_MCP2_MID_SEG.AIM                                                           -compress_type             [bin] >
+        -filename                  [default_file_name] > BHS_030_03MO_MCP2_MID_SEG.AIM
+        -compress_type             [bin] >
         -version_020               [true] >
 
         /write_v020
