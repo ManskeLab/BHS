@@ -133,5 +133,5 @@ To run this BHS registration script, you will need to download the ***Manskelab*
         - arg3 = The registered output 12MO to 03MO XCT grayscale image (image path + name)
         - arg4 = The input 03MO XCT segmented image (image path + name)
         - arg5 = The input 12MO XCT segmented image (image path + name)
-        - arg6 = The registered output 12MO to 03MO XCT segmented image (image path + name)Total of 6 files.
+        - arg6 = The registered output 12MO to 03MO XCT segmented image (image path + name)
 
