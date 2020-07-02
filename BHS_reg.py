@@ -23,11 +23,7 @@
 #
 # Notes: this script should work with NIfTI images as well, but hasn't been tested.
 #-----------------------------------------------------
-
 import os
-import sys
-import numpy as np
-import math
 import argparse
 
 import SimpleITK as sitk
@@ -81,7 +77,6 @@ XCT_12MO_image = sitk.ReadImage(XCT_12MO_image_path)
 
 print('Reading in {}'.format(XCT_12MO_SEG_image_path))
 XCT_12MO_SEG_image = sitk.ReadImage(XCT_12MO_SEG_image_path)
-
 
 #----------------------------------------------#
 # STEP 2: Perform landmark transformation
@@ -138,7 +133,6 @@ XCT_12MO_resampled = sitk.Resample( XCT_12MO_image, XCT_3MO_image, finalTransfor
 
 print('Writing to {}'.format(XCT_12MO_TO_03MO_REG_path))
 sitk.WriteImage(XCT_12MO_resampled, XCT_12MO_TO_03MO_REG_path)
-
 
 #----------------------------------------------#
 # STEP 6: Transform the segmented 12MO image
