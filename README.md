@@ -1,12 +1,12 @@
 # BHS Image Registration
 
 This repository contains all scripts developed for the manuscript:
+
 ***S.C. Brunet, J.J. Tse, M.T. Kuczynski, K. Engelke, S.K. Boyd, C. Barnabe, S.L. Manske. Heterogenous bone response to biologic DMARD therapies in rheumatoid arthritis patients and their relationship to functional indices. Calcif. Tissue Int. Submitted July 2020.***
 
 Improved image registration between baseline (3-month) and follow-up (12-month) XCT-II images of the MCP joint to show trabecular bone formation and loss over 9-months. This registration is performed outside of IPL and the OpenVMS system as we can obtain more accurate results using SimpleITK.
 
 ## Requirements:
-
 To run the ***BHS_reg.py*** script, you will need the following:
 - Python 3.6.X
 - SimpleITK v1.2.4
