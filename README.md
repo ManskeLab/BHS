@@ -1,18 +1,23 @@
 # BHS Image Registration
 
+This repository contains all scripts developed for the manuscript:
+***S.C. Brunet, J.J. Tse, M.T. Kuczynski, K. Engelke, S.K. Boyd, C. Barnabe, S.L. Manske. Heterogenous bone response to biologic DMARD therapies in rheumatoid arthritis patients and their relationship to functional indices. Calcif. Tissue Int. Submitted July 2020.***
+
 Improved image registration between baseline (3-month) and follow-up (12-month) XCT-II images of the MCP joint to show trabecular bone formation and loss over 9-months. This registration is performed outside of IPL and the OpenVMS system as we can obtain more accurate results using SimpleITK.
 
 ## Requirements:
 
-To run this BHS registration script, you will need to download the ***Manskelab*** GitHub repository and install the ***manskelab*** anaconda environment. See the setup instructions for the ***Manskelab*** repository [here](https://github.com/ManskeLab/Manskelab/tree/master/setup).
+To run the ***BHS_reg.py*** script, you will need the following:
+- Python 3.6.X
+- SimpleITK v1.2.4
 
 ## Steps to perform image registration:
-1. Transfer the 3-month and 12-month grayscale images from the UCT system to your computer using FileZilla
-    - Make sure you set your file transfer type to "Auto"
-2. Convert the AIM images to MHA images using the ***fileConverter.py*** script in the Manskelab GitHub repository
-    - Note that the original image orientation is lost when converting from AIM to any other file format!
+1. Transfer the 3-month and 12-month grayscale images from the UCT system to your computer using FileZilla.
+    - Make sure you set your file transfer type to "Auto".
+2. Convert the AIM images to MHA images using the ***fileConverter.py*** script in the ***util*** folder.
+    - Note that when using this script, the original image orientation is lost when converting from AIM to any other file format!
     - Thus, if you want to compare the images created in SimpleITK to the original images stored on the UCT system, you must convert the original images to MHA and back to AIM again. This is done to ensure both images have the same orientation.
-3. In IPL, segment the bone from the grayscale images and write out the segmented AIM
+3. In IPL, segment the bone from the grayscale images and write out the segmented AIM.
     - A typical process might be (but is not limited to):
         ```
         $ ipl
@@ -122,17 +127,16 @@ To run this BHS registration script, you will need to download the ***Manskelab*
         ```
 
 4. Now, transfer these baseline and follow-up segmented images to your computer using FileZilla
-5. Convert the segmented AIM images to MHA using the ***fileConverter.py*** script in the Manskelab GitHub repository
-6. Run the ***BHS_reg.py*** script in this repository as follows:
+5. Convert the segmented AIM images to MHA using the ***fileConverter.py*** script.
+6. Run the ***BHS_reg.py*** script as follows:
     ```python
-    conda activate manskelab
     python BHS_reg.py arg1 arg2 arg3 arg4 arg5 arg6
     ```
     - Where:
         - arg1 = The input 03MO XCT grayscale image (image path + name)
         - arg2 = The input 12MO XCT grayscale image (image path + name)
-        - arg3 = The registered output 12MO to 03MO XCT grayscale image (image path + name)
+        - arg3 = The output 12MO to 03MO registered XCT grayscale image (image path + name)
         - arg4 = The input 03MO XCT segmented image (image path + name)
         - arg5 = The input 12MO XCT segmented image (image path + name)
-        - arg6 = The registered output 12MO to 03MO XCT segmented image (image path + name)
+        - arg6 = The output 12MO to 03MO registered XCT segmented image (image path + name)
 
