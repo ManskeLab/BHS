@@ -7,9 +7,11 @@ This repository contains all scripts developed for the manuscript:
 Improved image registration between baseline (3-month) and follow-up (12-month) XCT-II images of the MCP joint to show trabecular bone formation and loss over 9-months. This registration is performed outside of IPL and the OpenVMS system as we can obtain more accurate results using SimpleITK.
 
 ## Requirements:
-To run the ***BHS_reg.py*** script, you will need the following:
+The ***BHS_reg.py*** script was developed with the following:
 - Python 3.6.X
+- Numpy v1.16.2
 - SimpleITK v1.2.4
+- VTK v8.2.0
 
 ## Steps to perform image registration:
 1. Transfer the 3-month and 12-month grayscale images from the UCT system to your computer using FileZilla.
@@ -127,7 +129,7 @@ To run the ***BHS_reg.py*** script, you will need the following:
         ```
 
 4. Now, transfer these baseline and follow-up segmented images to your computer using FileZilla
-5. Convert the segmented AIM images to MHA using the ***fileConverter.py*** script.
+5. Convert the segmented AIM images to MHA using the ***fileConverter.py*** script in the ***util*** folder.
 6. Run the ***BHS_reg.py*** script as follows:
     ```python
     python BHS_reg.py arg1 arg2 arg3 arg4 arg5 arg6
