@@ -2,7 +2,7 @@
 
 This repository contains all scripts developed for the manuscript:
 
-***S.C. Brunet, J.J. Tse, M.T. Kuczynski, K. Engelke, S.K. Boyd, C. Barnabe, S.L. Manske. Heterogenous bone response to biologic DMARD therapies in rheumatoid arthritis patients and their relationship to functional indices. Scand J Rheumatol. Submitted August 2020.***
+***SC Brunet, JJ Tse, MT Kuczynski, K Engelke, SK Boyd, C Barnabe & SL Manske (2021) Heterogenous bone response to biologic DMARD therapies in rheumatoid arthritis patients and their relationship to functional indices, Scandinavian Journal of Rheumatology, DOI: 10.1080/03009742.2020.1869303***
 
 Improved image registration between baseline (3-month) and follow-up (12-month) XCT-II images of the MCP joint to show trabecular bone formation and loss over 9-months. This registration is performed outside of IPL and the OpenVMS system as we can obtain more accurate results using SimpleITK.
 
